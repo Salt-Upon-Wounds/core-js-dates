@@ -228,7 +228,7 @@ function getNextFridayThe13th(date) {
   }).format;
   do {
     res.setDate(res.getDate() + 1);
-  } while (res.getDate() !== 13 && formatter(res) !== 'F');
+  } while (res.getDate() !== 13 || formatter(res) !== 'F');
   return res;
 }
 
